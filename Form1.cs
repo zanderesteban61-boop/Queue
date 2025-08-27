@@ -21,5 +21,17 @@ namespace Queue
         {
 
         }
+
+        private void btnCashier_Click(object sender, EventArgs e)
+        {
+            CashierClass.getNumberInQueue = CashierClass.CashierGeneratedNumber("P - ");
+            lblQueue.Text = CashierClass.getNumberInQueue;
+            CashierClass.CashierQueue.Enqueue(CashierClass.getNumberInQueue);
+        }
+        private void btnOpenQueueForm_Click_Click(object sender, EventArgs e)
+        {
+            CashierWindowQueueForm queueForm = new CashierWindowQueueForm();
+            queueForm.Show();
+        }
     }
 }

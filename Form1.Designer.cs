@@ -43,15 +43,17 @@
             this.btnCashier.TabIndex = 0;
             this.btnCashier.Text = "Cashier";
             this.btnCashier.UseVisualStyleBackColor = true;
+            this.btnCashier.Click += new System.EventHandler(this.btnCashier_Click);
             // 
             // lblQueue
             // 
             this.lblQueue.AutoSize = true;
-            this.lblQueue.Location = new System.Drawing.Point(510, 177);
+            this.lblQueue.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.lblQueue.Location = new System.Drawing.Point(433, 187);
             this.lblQueue.Name = "lblQueue";
-            this.lblQueue.Size = new System.Drawing.Size(35, 13);
+            this.lblQueue.Size = new System.Drawing.Size(54, 25);
             this.lblQueue.TabIndex = 1;
-            this.lblQueue.Text = "label1";
+            this.lblQueue.Text = "asas";
             this.lblQueue.Click += new System.EventHandler(this.lblQueue_Click);
             // 
             // label1

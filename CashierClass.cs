@@ -18,7 +18,7 @@ namespace Queue
         public static string CashierGeneratedNumber(string CashierNumber)
         {
             x++;
-
+                
             CashierNumber = CashierNumber + x.ToString();
             return CashierNumber;
         }
