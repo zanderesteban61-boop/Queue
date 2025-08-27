@@ -35,6 +35,7 @@
             // 
             // btnRefresh
             // 
+            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.btnRefresh.Location = new System.Drawing.Point(12, 24);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(90, 56);
@@ -45,6 +46,7 @@
             // 
             // btnNext
             // 
+            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.btnNext.Location = new System.Drawing.Point(12, 103);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(90, 56);
@@ -56,9 +58,9 @@
             // listCashierQueue
             // 
             this.listCashierQueue.HideSelection = false;
-            this.listCashierQueue.Location = new System.Drawing.Point(135, 35);
+            this.listCashierQueue.Location = new System.Drawing.Point(120, 24);
             this.listCashierQueue.Name = "listCashierQueue";
-            this.listCashierQueue.Size = new System.Drawing.Size(194, 390);
+            this.listCashierQueue.Size = new System.Drawing.Size(209, 401);
             this.listCashierQueue.TabIndex = 2;
             this.listCashierQueue.UseCompatibleStateImageBehavior = false;
             // 
@@ -72,6 +74,7 @@
             this.Controls.Add(this.btnRefresh);
             this.Name = "CashierWindowQueueForm";
             this.Text = "CashierWindowQueueForm";
+            this.Load += new System.EventHandler(this.CashierWindowQueueForm_Load);
             this.ResumeLayout(false);
 
         }

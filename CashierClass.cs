@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Queue
 {
-    internal class CashierClass
+   public class CashierClass
     {
 
 

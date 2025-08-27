@@ -19,7 +19,8 @@ namespace Queue
 
         private void lblQueue_Click(object sender, EventArgs e)
         {
-
+            CashierWindowQueueForm form2 = new CashierWindowQueueForm();
+            form2.ShowDialog();
         }
 
         private void btnCashier_Click(object sender, EventArgs e)
@@ -33,5 +34,24 @@ namespace Queue
             CashierWindowQueueForm queueForm = new CashierWindowQueueForm();
             queueForm.Show();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+        private void btnOpenCashierQueue_Click(object sender, EventArgs e)
+        {
+            
+            CashierWindowQueueForm form2 = new CashierWindowQueueForm();
+
+            
+            form2.Show();
+
+        }
     }
+
 }

@@ -11,41 +11,35 @@ using System.Windows.Forms;
 
 namespace Queue
 {
-    
+
     public partial class CashierWindowQueueForm : Form
     {
         public CashierWindowQueueForm()
+
         {
             InitializeComponent();
         }
 
-        
+
+
+
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             DisplayCashierQueue(CashierClass.CashierQueue);
         }
-
-        
-        public void DisplayCashierQueue(IEnumerable<string> CashierList)
+        public void DisplayCashierQueue(IEnumerable CashierList)
         {
             listCashierQueue.Items.Clear();
-
-            foreach (string obj in CashierList)
+            foreach (Object obj in CashierList)
             {
-                listCashierQueue.Items.Add(obj);
+                listCashierQueue.Items.Add(obj.ToString());
+
             }
         }
 
-        
-        private void btnNext_Click(object sender, EventArgs e)
+        private void CashierWindowQueueForm_Load(object sender, EventArgs e)
         {
             
-        }
-
-      
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            DisplayCashierQueue(CashierClass.CashierQueue);
         }
 
         private void btnNext_Click_1(object sender, EventArgs e)
@@ -60,5 +54,14 @@ namespace Queue
                 MessageBox.Show("The queue is empty.");
             }
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DisplayCashierQueue(CashierClass.CashierQueue);
+        }
+
+
+
+
     }
-    }
+}
