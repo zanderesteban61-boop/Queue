@@ -16,5 +16,10 @@ namespace Queue
         {
             InitializeComponent();
         }
+
+        private void lblQueue_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
