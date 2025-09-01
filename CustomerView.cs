@@ -15,7 +15,22 @@ namespace Queue
         public CustomerView()
         {
             InitializeComponent();
+            if (CashierClass.CashierQueue.Count > 0)
+            {
+                string next = CashierClass.CashierQueue.Peek();
+                LblNowServing.Text = "Now Serving: " + next;
+            }
+
+            CashierClass.OnQueueChanged += () =>
+            {
+                if (CashierClass.CashierQueue.Count > 0)
+                {
+                    string next = CashierClass.CashierQueue.Peek();
+                    UpdateNowServing(next);
+                }
+            };
         }
+
         private static CustomerView instance;
         public static CustomerView Instance
         {
@@ -27,40 +42,16 @@ namespace Queue
             }
         }
 
-        public CustomerView()
-        {
-            InitializeComponent();
-
-         
-
-            if (CashierClass.CashierQueue.Count > 0)
-            {
-                string next = CashierClass.CashierQueue.Peek();
-                LblNowServing.Text = "Now Serving: " + next;
-            }
-
-      
-            CashierClass.OnQueueChanged += () =>
-            {
-                if (CashierClass.CashierQueue.Count > 0)
-                {
-                    string next = CashierClass.CashierQueue.Peek();
-                    UpdateNowServing(next);
-                }
-            };
-        }
-
         public void UpdateNowServing(string number)
         {
             if (LblNowServing.InvokeRequired)
             {
                 LblNowServing.Invoke(new MethodInvoker(() =>
-                    LblNowServing.Text = "Now Serving: " + number));
+                    LblNowServing.Text = "" + number));
             }
             else
             {
-                LblNowServing.Text = "Now Serving: " + number;
-
+                LblNowServing.Text = ": " + number;
             }
         }
     }
