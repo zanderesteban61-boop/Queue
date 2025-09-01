@@ -63,12 +63,13 @@
             this.listCashierQueue.Size = new System.Drawing.Size(209, 401);
             this.listCashierQueue.TabIndex = 2;
             this.listCashierQueue.UseCompatibleStateImageBehavior = false;
+            this.listCashierQueue.SelectedIndexChanged += new System.EventHandler(this.listCashierQueue_SelectedIndexChanged);
             // 
             // CashierWindowQueueForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(341, 450);
+            this.ClientSize = new System.Drawing.Size(361, 450);
             this.Controls.Add(this.listCashierQueue);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnRefresh);

@@ -44,10 +44,15 @@ namespace Queue
 
         private void btnNext_Click_1(object sender, EventArgs e)
         {
-            if (CashierClass.CashierQueue.Count > 0)
+            string nowServingNumber = CashierClass.DequeueNumber();
+
+            if (nowServingNumber != null)
             {
-               
-                CashierClass.CashierQueue.Dequeue();
+                CustomerView.Instance.Show();
+                CustomerView.Instance.BringToFront();
+
+              
+                CustomerView.Instance.UpdateNowServing(nowServingNumber);
             }
             else
             {
@@ -60,8 +65,9 @@ namespace Queue
             DisplayCashierQueue(CashierClass.CashierQueue);
         }
 
+        private void listCashierQueue_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-
-
+        }
     }
 }
