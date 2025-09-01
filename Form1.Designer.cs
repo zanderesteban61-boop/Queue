@@ -49,11 +49,10 @@
             // 
             this.lblQueue.AutoSize = true;
             this.lblQueue.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.lblQueue.Location = new System.Drawing.Point(433, 187);
+            this.lblQueue.Location = new System.Drawing.Point(482, 203);
             this.lblQueue.Name = "lblQueue";
-            this.lblQueue.Size = new System.Drawing.Size(54, 25);
+            this.lblQueue.Size = new System.Drawing.Size(0, 25);
             this.lblQueue.TabIndex = 1;
-            this.lblQueue.Text = "asas";
             this.lblQueue.Click += new System.EventHandler(this.lblQueue_Click);
             // 
             // label1
@@ -82,6 +81,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
